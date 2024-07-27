@@ -1,0 +1,108 @@
+package demo.package1;
+import java.util.Scanner;
+
+class Employee
+{
+	String emp_name;
+	int emp_id;
+	String address;
+	String mail;
+	long phno;
+	float bp;
+	float da;
+	float hra;
+	float pf;
+	float scf;
+	float gross;
+	float net;
+	void accept()
+	{
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter name of Employee:");
+		emp_name= sc.next();
+		System.out.println("Enter ID of Employee:");
+		emp_id= sc.nextInt();
+		System.out.println("Enter address of Employee:");
+		address= sc.next();
+		System.out.println("Enter mail ID of Employee:");
+		mail= sc.next();
+		System.out.println("Enter mobile number of Employee:");
+		phno= sc.nextLong();
+	}
+	void display()
+	{
+		System.out.println("Name of employee is"+emp_name);
+		System.out.println("Employee ID of employee is"+emp_id);
+		System.out.println("Address of employee is"+address);
+		System.out.println("Mail ID of employee is"+mail);
+		System.out.println("Mobile number of employee is"+phno);
+	}
+	void pay()
+	{
+		Scanner sc= new Scanner(System.in);
+		System.out.println("\nEnter basic pay of Employee:");
+		bp=sc.nextFloat();
+		da=0.97f*bp;
+		hra=0.1f*bp;
+		pf=0.12f*bp;
+		scf=0.001f*bp;
+		gross=bp+da+hra;
+		net=gross-pf-scf;
+		System.out.println("Gross salary of Employee"+gross);
+		System.out.println("Net salary of Employee"+net);
+	}
+}
+class Programmer extends Employee{}
+class Teamlead extends Employee{}
+class AssitantProjectManager extends Employee{}
+class ProjectManager extends Employee{}
+
+class Inheritance {
+	public static void main(String[] args)
+	{
+		int x;
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter the Employee of choice:");
+		System.out.println("1.Programmer");
+		System.out.println("2.Team Lead");
+		System.out.println("3.Assitant Project Manager");
+		System.out.println("4.Project Manager");
+		x=sc.nextInt();
+		switch (x)
+		{
+		case 1:
+			Programmer p= new Programmer();
+			p.accept();
+			System.out.println("---Displaying Details of Programmer---");
+			p.display();
+			p.pay();
+			break;
+		case 2:
+			Teamlead t= new Teamlead();
+			t.accept();
+			System.out.println("---Displaying Details of Team Lead---");
+			t.display();
+			t.pay();
+			break;
+		case 3:
+			AssitantProjectManager a= new AssitantProjectManager();
+			a.accept();
+			System.out.println("---Displaying Details of Assistant Project Manager---");
+			a.display();
+			a.pay();
+			break;
+		case 4:
+			ProjectManager pm= new ProjectManager();
+			pm.accept();
+			System.out.println("---Displaying Details of Project Manager---");
+			pm.display();
+			pm.pay();
+			break;
+		default:
+			System.out.println("Invalid");
+			break;
+			
+		}
+	}
+
+}
