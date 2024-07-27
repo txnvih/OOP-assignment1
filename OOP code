@@ -1,0 +1,44 @@
+package demo.package1;
+import java.util.Scanner;
+
+class complex1
+{
+	int r1;
+	int r2;
+	int i1;
+	int i2;
+	public complex1(int r1, int r2, int i1, int i2)
+	{
+		super();
+		this.r1 = r1;
+		this.r2 = r2;
+		this.i1 = i1;
+		this.i2 = i2;
+	}
+	void accept()
+	{
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter real part:");
+		this.r1=sc.nextInt();
+		System.out.println("Enter imaginary part 1:");
+		this.i1=sc.nextInt();
+		System.out.println("Enter real part 2:");
+		this.r2=sc.nextInt();
+		System.out.println("Enter imaginary part 2:");
+		this.i2=sc.nextInt();
+	}
+	void display()
+	{
+		System.out.println("Sum of two complex numbers is:"+(r1+r2)+"+"+(i1+i2)+"i");
+	}
+}
+class Complex
+{
+	public static void main(String[] args)
+	{
+		System.out.println("---To add two complex numbers---");
+		complex1 c= new complex1(0,0,0,0);
+		c.accept();
+		c.display();
+	}
+}
