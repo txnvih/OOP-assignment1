@@ -1,0 +1,34 @@
+Enter the Employee of choice:
+1.Programmer
+2.Team Lead
+3.Assitant Project Manager
+4.Project Manager
+1
+Enter name of Employee:
+Tara
+Enter ID of Employee:
+123
+Enter address of Employee:
+Mumbai
+Enter mail ID of Employee:
+Tara@gmail.com
+Enter mobile number of Employee:
+1234567890
+---Displaying Details of Programmer---
+Name of employee is Tara
+Employee ID of employee is 123
+Address of employee is Mumbai
+Mail ID of employee is Tara@gmail.com
+Mobile number of employee is 1234567890
+
+Enter basic pay of Employee:
+100000
+
+---Displaying Pay Slip---
+Basic pay of Employee is 100000.0
+Dearness Allowance of Employee is 97000.0
+House Rent Allowance of Employee is 10000.0
+Provident fund of Employee is 12000.0
+Staff club funds of Employee is 100.00001
+Gross salary of Employee is 207000.0
+Net salary of Employee is 194900.0
